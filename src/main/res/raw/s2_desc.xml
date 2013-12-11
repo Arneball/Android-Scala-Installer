@@ -1,0 +1,4 @@
+<permissions>
+  <library name="s2"
+    file="/data/data/com.mobilemagic.scalainstaller/files/s2.jar"/>
+</permissions>

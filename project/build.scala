@@ -5,14 +5,15 @@ import AndroidKeys._
 
 object General {
   val settings = Defaults.defaultSettings ++ Seq (
-    name := "Scala Installer",
+    name := "ScalaInstaller",
     version := "0.1",
     scalaVersion := "2.9.1",
-    platformName in Android := "android-8"
+    platformName in Android := "android-8",
+    javacOptions ++= Seq("-source", "1.6", "-target", "1.6")
   )
 
   lazy val fullAndroidSettings =
-    General.settings ++
+    General.settings ++  
     AndroidProject.androidSettings ++
     TypedResources.settings ++
     AndroidMarketPublish.settings ++ Seq (
@@ -24,7 +25,7 @@ object General {
 
 object AndroidBuild extends Build {
   lazy val main = Project (
-    "Scala Installer",
+    "ScalaInstaller",
     file("."),
     settings = General.fullAndroidSettings
   )
@@ -33,7 +34,7 @@ object AndroidBuild extends Build {
     "tests",
     file("tests"),
     settings = General.settings ++ AndroidTest.androidSettings ++ Seq (
-      name := "Scala InstallerTests"
+      name := "ScalaInstallerTests"
     )
   ) dependsOn main
 }

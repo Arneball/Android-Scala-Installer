@@ -29,16 +29,12 @@ object RoboInstaller {
   }
 
   final val TAG: String = "RoboInstaller"
-  val resources = Array(R.raw.scala_actors_291,
-                        R.raw.scala_actors_291_desc,
-                        R.raw.scala_collection_291,
-                        R.raw.scala_collection_291_desc,
-                        R.raw.scala_immutable_291,
-                        R.raw.scala_immutable_291_desc,
-                        R.raw.scala_library_291,
-                        R.raw.scala_library_291_desc,
-                        R.raw.scala_mutable_291,
-                        R.raw.scala_mutable_291_desc)
+  val resources = Array(R.raw.s1,
+                        R.raw.s1_desc,
+                        R.raw.s2,
+                        R.raw.s2_desc,
+                        R.raw.s3,
+                        R.raw.s3_desc)
 
   val runtime: Runtime = Runtime.getRuntime
 }
