@@ -10,6 +10,6 @@
         3. Link the library descriptor files into /system/etc/permissions\n
         4. Remount /system read-only\n
     </string>
-    <string name="run_button_text">Install Scala 2.9.1 libraries</string>
-    <string name="uninstall_button_text">Remove Scala 2.9.1 libraries</string>
+    <string name="run_button_text">Install Scala 2.11.1 libraries</string>
+    <string name="uninstall_button_text">Remove Scala 2.11.1 libraries</string>
 </resources>
