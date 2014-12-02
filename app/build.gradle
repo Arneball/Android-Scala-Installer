@@ -1,0 +1,62 @@
+repositories {
+    jcenter()
+}
+
+apply plugin: "com.android.application"
+apply plugin: "jp.leafytree.android-scala"
+
+android {
+    compileSdkVersion "android-21"
+    buildToolsVersion "21.1.1"
+
+    defaultConfig {
+        minSdkVersion 8
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+
+    dexOptions {
+        preDexLibraries true
+    }
+
+//    signingConfigs {
+//        release {
+//            storeFile file("my-release-key.keystore")
+//            storePassword "slaskpappa"
+//            keyAlias "alias_name"
+//            keyPassword "slaskpappa"
+//        }
+//    }
+
+//    buildTypes {
+//        release {
+//            minifyEnabled = true
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), \
+//                          'proguard-rules.txt'
+//            signingConfig signingConfigs.release
+//        }
+//        debug {
+//            minifyEnabled = false
+//        }
+//    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            java.srcDirs = ['src/main/java']
+            resources.srcDirs = ['src/main/java']
+            aidl.srcDirs = ['src/main/java']
+            renderscript.srcDirs = ['src/main/java']
+            res.srcDirs = ['src/main/res']
+            assets.srcDirs = ['src/main/assets']
+        }
+    }
+
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:21.0.2'
+    compile "org.scala-lang:scala-library:2.11.4"
+//    debugProvided "org.scala-lang:scala-library:2.11.4"
+}
