@@ -20,27 +20,6 @@ android {
         preDexLibraries true
     }
 
-//    signingConfigs {
-//        release {
-//            storeFile file("my-release-key.keystore")
-//            storePassword "slaskpappa"
-//            keyAlias "alias_name"
-//            keyPassword "slaskpappa"
-//        }
-//    }
-
-//    buildTypes {
-//        release {
-//            minifyEnabled = true
-//            proguardFiles getDefaultProguardFile('proguard-android.txt'), \
-//                          'proguard-rules.txt'
-//            signingConfig signingConfigs.release
-//        }
-//        debug {
-//            minifyEnabled = false
-//        }
-//    }
-
     sourceSets {
         main {
             manifest.srcFile 'src/main/AndroidManifest.xml'
@@ -58,5 +37,4 @@ android {
 dependencies {
     compile 'com.android.support:appcompat-v7:21.0.2'
     compile "org.scala-lang:scala-library:2.11.4"
-//    debugProvided "org.scala-lang:scala-library:2.11.4"
 }
